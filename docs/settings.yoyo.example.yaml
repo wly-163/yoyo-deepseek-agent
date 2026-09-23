@@ -1,0 +1,30 @@
+# Example fragment for $DSH_HOME/settings.yaml (merge carefully).
+# Branding: Yoyo. Do not commit real API keys.
+#
+# Credentials belong in $DSH_HOME/.credentials.yaml, for example:
+#   YOYO_GATEWAY_API_KEY: sk-...
+
+agent-default-model:
+  provider: yoyo
+  model: deepseek-v4-flash
+
+llm-pi-ai:
+  providers:
+    yoyo:
+      displayName: yoyo
+      apiKeyEnv: YOYO_GATEWAY_API_KEY
+      api: openai-completions
+      # Technical gateway endpoint (not product branding).
+      baseURL: https://anapi-uat.annto.com/api-sse-anthropic/v1
+      models:
+        # Verified on OpenAI-compatible chat/completions with the portal key:
+        - id: deepseek-v4-flash
+          name: deepseek-v4-flash
+        - id: minimax-m2.7
+          name: minimax-m2.7
+        - id: minimax-m2.7-highspeed
+          name: minimax-m2.7-highspeed
+        - id: minimax-m3
+          name: minimax-m3
+        # Some portal models return 403 protocol_restricted on this baseURL.
+        # Add them only after you confirm the protocol your key is allowed to use.
