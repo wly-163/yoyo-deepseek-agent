@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  Install the Yoyo dsh profile into $DSH_HOME/profiles/yoyo.
+  Install the Yoyo-deepseek Agent dsh profile into $DSH_HOME/profiles/yoyo.
 #>
 $ErrorActionPreference = 'Stop'
 
@@ -19,5 +19,5 @@ Copy-Item -Force (Join-Path $Source 'package.json') (Join-Path $Dest 'package.js
 Copy-Item -Force (Join-Path $Source 'cordis.patch.yml') (Join-Path $Dest 'cordis.patch.yml')
 Copy-Item -Force (Join-Path $Source 'pnpm-workspace.yaml') (Join-Path $Dest 'pnpm-workspace.yaml')
 
-Write-Host "Installed Yoyo profile -> $Dest"
+Write-Host "Installed Yoyo-deepseek Agent profile -> $Dest"
 Write-Host "Run from a DeepSeek Harness checkout: pnpm dsh --profile yoyo web"

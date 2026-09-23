@@ -1,10 +1,10 @@
-# Syncing DeepSeek Harness into Yoyo
+# Syncing DeepSeek Harness into Yoyo-deepseek Agent
 
-Yoyo is a product shell. Upstream is [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness).
+Yoyo-deepseek Agent is a product shell. Upstream is [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness).
 
 ## Rules
 
-1. Put Yoyo-only changes under `profiles/` and `packages/` in **this** repo.
+1. Put product-only changes under `profiles/` and `packages/` in **this** repo.
 2. Do not rename `@deepseek-ai/*` packages in the harness tree — that blocks merges.
 3. Prefer `$DSH_HOME/settings.yaml` and credentials for gateway/model defaults.
 4. After every upstream bump: `pnpm install` → `pnpm run build` → `pnpm dsh --profile yoyo web` smoke.
@@ -38,10 +38,10 @@ git fetch upstream
 git merge upstream/master
 ```
 
-## This repository (yoyo-agent)
+## This repository (yoyo-deepseek-agent)
 
 ```sh
-git remote add origin https://github.com/wly-163/yoyo-agent.git
+git remote add origin https://github.com/wly-163/yoyo-deepseek-agent.git
 git push -u origin master
 ```
 

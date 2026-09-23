@@ -1,5 +1,5 @@
 # Example fragment for $DSH_HOME/settings.yaml (merge carefully).
-# Branding: Yoyo. Do not commit real API keys.
+# Branding: Yoyo-deepseek Agent. Do not commit real API keys.
 #
 # Credentials belong in $DSH_HOME/.credentials.yaml, for example:
 #   YOYO_GATEWAY_API_KEY: sk-...
@@ -11,7 +11,7 @@ agent-default-model:
 llm-pi-ai:
   providers:
     yoyo:
-      displayName: yoyo
+      displayName: Yoyo-deepseek Agent
       apiKeyEnv: YOYO_GATEWAY_API_KEY
       api: openai-completions
       # Technical gateway endpoint (not product branding).

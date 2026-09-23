@@ -1,7 +1,7 @@
 {
   "name": "dsh-profile-yoyo",
   "private": true,
-  "description": "Yoyo default profile — personal product shell over DeepSeek Harness",
+  "description": "Yoyo-deepseek Agent default profile — product shell over DeepSeek Harness",
   "dependencies": {},
   "dsh": {
     "profile": {

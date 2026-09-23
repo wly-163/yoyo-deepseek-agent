@@ -1,16 +1,16 @@
-# Yoyo
+# Yoyo-deepseek Agent
 
-Personal open-source agent product shell by [wly-163](https://github.com/wly-163).
+Personal open-source agent product by [wly-163](https://github.com/wly-163).
 
-Yoyo is a **thin distribution layer** on top of [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness):
+**Yoyo-deepseek Agent** is a thin distribution layer on top of [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness):
 
 - **Your brand and defaults** live in this repository (`profiles/yoyo`, docs, scripts).
 - **The harness kernel** stays upstream and is synced on purpose — we do not fork-rename `@deepseek-ai/*` packages in v1.
-- **Company or personal gateways** are configuration, not branding. Product copy says **Yoyo** only.
+- **Gateways** are configuration, not branding. Product copy says **Yoyo-deepseek Agent** only.
 
 ## Repository
 
-- GitHub (intended): https://github.com/wly-163/yoyo-agent
+- GitHub (intended): https://github.com/wly-163/yoyo-deepseek-agent
 - Author: https://github.com/wly-163
 
 ## Quick start
@@ -24,9 +24,9 @@ pnpm install
 pnpm run build
 ```
 
-Or set `YOYO_UPSTREAM` to an existing buildable checkout (this machine often uses `D:\软件安装包\deepseek-harness`).
+Or set `YOYO_UPSTREAM` to an existing buildable checkout.
 
-### 2. Install the Yoyo profile
+### 2. Install the Yoyo-deepseek Agent profile
 
 From this repository (PowerShell):
 
@@ -55,9 +55,9 @@ Default UI: `http://127.0.0.1:3080/`
 ## Layout
 
 ```text
-yoyo-agent/
+yoyo-deepseek-agent/
 ├── profiles/yoyo/     # dsh profile (bundles + optional cordis.patch.yml)
-├── packages/          # future Yoyo-owned plugins (empty in v1)
+├── packages/          # future product-owned plugins (empty in v1)
 ├── docs/              # sync guide + settings example
 └── scripts/           # install profile / sync checklist
 ```
@@ -68,7 +68,7 @@ See [docs/sync.md](docs/sync.md). Keep custom code in `profiles/` and `packages/
 
 ## License
 
-[MIT](LICENSE). DeepSeek Harness remains copyright DeepSeek under MIT; Yoyo adds its own copyright for original files in this repository.
+[MIT](LICENSE). DeepSeek Harness remains copyright DeepSeek under MIT; this repository adds copyright for original Yoyo-deepseek Agent files.
 
 ## Acknowledgments
 

@@ -1,7 +1,7 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  Print a checklist for syncing / verifying the upstream harness checkout.
+  Print a checklist for syncing / verifying the upstream harness checkout (Yoyo-deepseek Agent).
 #>
 $ErrorActionPreference = 'Stop'
 
@@ -11,7 +11,7 @@ $Upstream = if ($env:YOYO_UPSTREAM) {
   'D:\软件安装包\deepseek-harness'
 }
 
-Write-Host "Yoyo upstream checklist"
+Write-Host "Yoyo-deepseek Agent — upstream checklist"
 Write-Host "Checkout: $Upstream"
 Write-Host ""
 
