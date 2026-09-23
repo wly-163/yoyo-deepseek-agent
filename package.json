@@ -1,0 +1,11 @@
+{
+  "name": "yoyo-deepseek-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Yoyo-deepseek Agent — product shell over DeepSeek Harness (no app dependencies here)",
+  "scripts": {
+    "install-profile": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/install-profile.ps1",
+    "sync-check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/sync-upstream-checklist.ps1",
+    "hint": "node ./scripts/print-start-hint.mjs"
+  }
+}

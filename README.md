@@ -15,6 +15,10 @@ Personal open-source agent product by [wly-163](https://github.com/wly-163).
 
 ## Quick start
 
+> **Important:** This repository is a **product shell**. It does **not** contain the harness runtime.
+> Do **not** run `pnpm install` here expecting the agent app — run that in the DeepSeek Harness checkout.
+> In this repo, useful scripts are: `pnpm run install-profile`, `pnpm run hint`.
+
 ### 1. Get a DeepSeek Harness checkout
 
 ```sh
@@ -24,14 +28,16 @@ pnpm install
 pnpm run build
 ```
 
-Or set `YOYO_UPSTREAM` to an existing buildable checkout.
+Or set `YOYO_UPSTREAM` to an existing buildable checkout (example on this machine: `D:\软件安装包\deepseek-harness`).
 
 ### 2. Install the Yoyo-deepseek Agent profile
 
-From this repository (PowerShell):
+From **this** repository:
 
 ```powershell
-.\scripts\install-profile.ps1
+cd E:\Dev\Projects\yoyo-deepseek-agent
+pnpm run install-profile
+# or: .\scripts\install-profile.ps1
 ```
 
 This copies `profiles/yoyo` into `$DSH_HOME/profiles/yoyo` (default `~\.dsh\profiles\yoyo`).
@@ -43,10 +49,10 @@ Copy the example settings fragment and merge into `$DSH_HOME/settings.yaml`, or 
 - Example: [`docs/settings.yoyo.example.yaml`](docs/settings.yoyo.example.yaml)
 - Put API keys only in `$DSH_HOME/.credentials.yaml` (never commit them)
 
-### 4. Run
+### 4. Run (always from the harness checkout)
 
-```sh
-# from the harness checkout
+```powershell
+cd "D:\软件安装包\deepseek-harness"
 pnpm dsh --profile yoyo web
 ```
 
